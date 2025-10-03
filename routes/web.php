@@ -7,4 +7,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/categorys', [CategorysController::class, "index"]);
+Route::get('/categorys', [CategorysController::class, "index"])->name("categorys.index");
