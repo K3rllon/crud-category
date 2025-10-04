@@ -12,5 +12,8 @@
         <li> {{$category->name}} </li>
         @endforeach
     </ul>
+    <a href="{{ route('categorys.create') }}">
+        <button>Cadastrar Nova Categoria</button>
+    </a>
 </body>
 </html>
