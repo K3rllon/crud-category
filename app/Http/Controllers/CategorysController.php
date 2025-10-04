@@ -66,6 +66,6 @@ class CategorysController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        
     }
 }
