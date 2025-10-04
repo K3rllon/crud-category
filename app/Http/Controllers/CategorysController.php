@@ -21,7 +21,7 @@ class CategorysController extends Controller
      */
     public function create()
     {
-        //
+        return view("categorys.create");
     }
 
     /**
@@ -29,7 +29,8 @@ class CategorysController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Category::create($request->all());
+        return redirect()->rout("categorys.index");
     }
 
     /**
