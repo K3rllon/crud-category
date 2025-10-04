@@ -10,8 +10,15 @@
     <ul>
         @foreach($categorys as $category)
         <li> {{$category->name}} <a href="{{ route('categorys.edit', $category->id) }}">
-        <button>Editar Categoria</button>
-    </a></li>
+            <button>Editar Categoria</button> </a> 
+
+            <form action="{{ route('categorys.destroy', $category->id) }}" method="post">
+                @method("delete")
+                @csrf
+                <input type="submit" value="Excluir">  
+            </form>
+            
+        </li>
         @endforeach
     </ul>
     <a href="{{ route('categorys.create') }}">
