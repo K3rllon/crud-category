@@ -46,7 +46,8 @@ class CategorysController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $category = Category::findOrFail($id);
+        return view("categorys.edit", compact("category"));
     }
 
     /**
@@ -54,7 +55,10 @@ class CategorysController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $category = Category::findOrFail($id);
+        $category->update($request->all());
+        return redirect()->route("categorys.index");
+
     }
 
     /**

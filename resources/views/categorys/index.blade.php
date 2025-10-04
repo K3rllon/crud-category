@@ -9,7 +9,9 @@
     <h1>Categorias</h1>
     <ul>
         @foreach($categorys as $category)
-        <li> {{$category->name}} </li>
+        <li> {{$category->name}} <a href="{{ route('categorys.edit', $category->id) }}">
+        <button>Editar Categoria</button>
+    </a></li>
         @endforeach
     </ul>
     <a href="{{ route('categorys.create') }}">
